@@ -11,7 +11,7 @@ git clone https://github.com/ViktorovGO/task_for_interview.git
 
 ## **2. Перейти в папку проекта:**
 ```
-cd /task_for_interview/
+cd task_for_interview/
 ```
 
 ## **3. Cоздать и активировать виртуальное окружение:**
