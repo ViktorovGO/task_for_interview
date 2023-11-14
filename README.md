@@ -42,7 +42,7 @@ pip install -r requirements.txt
 
 ## **5. Запустить веб сервер**
 ~~~
-cd /backend/
+cd backend/
 ~~~
 ~~~
 python manage.py runserver
