@@ -44,6 +44,15 @@ pip install -r requirements.txt
 ~~~
 cd backend/
 ~~~
+- Создать миграции
+```
+python manage.py makemigrations
+```
+- Применить миграции
+```
+python manage.py migrate
+```
+- Запустить сервер
 ~~~
 python manage.py runserver
 ~~~
