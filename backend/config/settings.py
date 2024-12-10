@@ -76,8 +76,16 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'forms',
+        'ENCRYPTED': False,
+        'CLIENT': {
+            'host': 'mongodb://localhost:27017',
+            'username': 'root',
+            'password': 'example',
+            'authSource': 'admin',
+            'authMechanism': 'SCRAM-SHA-1',
+        },
     }
 }
 

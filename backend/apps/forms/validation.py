@@ -2,10 +2,10 @@ from datetime import datetime
 import phonenumbers
 from phonenumbers import carrier
 from phonenumbers.phonenumberutil import number_type
-from email_validate import validate as m_valid
+# from email_validate import validate as m_valid
+from email_validator import validate_email, EmailNotValidError
 
-
-def validation(field, field_type, out_type=False):
+def validation(field):
     def_type = 'text'
     if is_valid_date(field):
         def_type = 'date'
@@ -14,7 +14,7 @@ def validation(field, field_type, out_type=False):
     elif is_valid_email(field):
         def_type = 'email'
 
-    return def_type == field_type if not out_type else def_type
+    return def_type
 
 
 def is_valid_date(value):
@@ -35,12 +35,16 @@ def is_valid_phone(value):
 
 
 def is_valid_email(value):
-    
-    return m_valid(email_address=value,
-    check_format=True,
-    check_blacklist=False,
-    check_dns=False,
-    check_smtp=False,
-    smtp_debug=False)
+    try:
+        validate_email(value)
+        return True
+    except EmailNotValidError as e:
+        return False
+    # return m_valid(email_address=value,
+    # check_format=True,
+    # check_blacklist=False,
+    # check_dns=False,
+    # check_smtp=False,
+    # smtp_debug=False)
 
 

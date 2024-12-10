@@ -1,5 +1,0 @@
-Django
-requests
-phonenumbers
-email_validate
-# django-phonenumber-field[phonenumberslite]

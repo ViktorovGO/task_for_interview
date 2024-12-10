@@ -3,6 +3,7 @@ from django.db import models
 
 
 class MyForm(models.Model):
+    id = models.BigAutoField(primary_key=True)
     name = models.CharField(max_length=256, verbose_name='Имя формы', null=True)
     date = models.CharField(max_length=256,verbose_name='Дата',blank=True, null=True)
     phone = models.CharField(max_length=256,verbose_name='Телефон',blank=True, null=True)
