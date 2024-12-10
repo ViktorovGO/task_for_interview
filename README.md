@@ -35,6 +35,10 @@ source venv/bin/activate
 ```
 python -m pip install --upgrade pip
 ```
+- Запустить docker-compose с MongoDB
+```
+docker-compose up -d
+```
 - Перейти в директорию backend
 ~~~
 cd backend/
@@ -42,10 +46,6 @@ cd backend/
 - Установить зависимости
 ```
 pip install -r requirements.txt
-```
-- Запустить docker-compose с MongoDB
-```
-docker-compose up -d
 ```
 ## **5. Запустить веб сервер**
 
