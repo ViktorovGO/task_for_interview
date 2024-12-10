@@ -16,7 +16,7 @@ cd task_for_interview/
 
 ## **3. Cоздать и активировать виртуальное окружение:**
 ```
-python -m virtualenv venv
+python -m venv venv
 ```
 
 Для Windows:
